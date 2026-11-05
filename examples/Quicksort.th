@@ -1,0 +1,40 @@
+var concat=fn(arr1,arr2){
+    for(var i=0,i<len(arr2),1){
+        var arr1=push(arr1,arr2[i])
+    }
+    return arr1;
+}
+
+var quicksort=fn(arr){
+    if(len(arr)<2){
+        return arr;
+    }
+    var pivot=arr[0];
+    var curArr=shift(arr)
+    var less=[]
+    for(var i=0,i<len(curArr),1){
+        if(curArr[i]<=pivot){
+            var less=push(less,curArr[i])
+        }
+    }
+    var greater=[]
+    for(var i=0,i<len(curArr),1){
+        if(curArr[i]>pivot){
+            var greater=push(greater,curArr[i])
+        }
+    }
+    return concat(concat(quicksort(less),[pivot]),quicksort(greater));
+}
+
+println(quicksort([10,5,2,99,3]))
+
+
+
+
+
+
+
+
+
+
+

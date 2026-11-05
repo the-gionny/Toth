@@ -1,0 +1,156 @@
+var MATH_TypeError=fn(funcname,argnumber,expectedtype,id){
+    if(typeof(id)!=expectedtype){throwError("argument["+argnumber+"] `"+funcname+"` must be "+expectedtype+", got "+typeof(id))}
+}
+
+
+
+var floor =fn(x){
+    MATH_TypeError("floor",0,"FLOAT",x);
+    var result=-1;
+    if(x>=0){
+        var result=toInt(x)
+    }else{
+        var result=toInt(x)-1
+    }
+    return result;
+}
+var ceil =fn(x){
+    MATH_TypeError("ceil",0,"FLOAT",x);
+    if(typeof(x)=="INTEGER"){
+        return x;
+    }
+    if (x > 0){
+        return i + 1;
+    }
+    return i;
+}
+
+var clamp=fn(x,min,max){
+    if(x < min){
+        return min;
+    }
+    if(x > max){
+        return max;
+    }
+    return x;
+}
+
+var isOdd =fn(x){
+    if(x%2==1){
+        true;
+    }else{
+        false;
+    }
+}
+var isEven =fn(x){
+    if(x%2==1){
+        false;
+    }else{
+        true;
+    }
+}
+
+var factorize =fn(n){
+    var factors=[n]
+    while(n!=1){
+        if(isEven(n)){
+            var n=n/2;
+        }else{
+            var n=n/3;
+        }
+        var factors =push(factors,n);
+    }
+    factors;
+}
+
+var sqrt=fn(N) {
+    if(N<0){
+        throwError("sqrt: x must be a positive number")
+    }
+    if(N == 0){return 0;}
+    var x = N / 2.0;
+    var prev = 0.0;
+    while(x != prev) {
+        var prev = x;
+        var x = (x + N / x) / 2.0;
+    }
+    return x;
+}
+
+var abs=fn(x){
+    if(x<0){
+        return x*-1;
+    }
+    return x;
+}
+
+var loge = fn(x){
+    if(x <= 0) {
+        throwError("loge: x must be a positive number got="+x);
+    }
+    var x =0.0+x
+    var result = 0.0;
+    var n = 1.0;
+    var term = (x - 1) / (x + 1);
+
+
+    while(abs(term^(2*n-1)) > 0.01) {\*0.000001*\ 
+        var calcolozzo=(1 / (2*n - 1)) * (term^(2*n - 1));
+        var result = result + calcolozzo;
+        var n += 1;
+    }
+
+    return 2 * result;
+}
+
+
+var log2=fn(x){
+    return loge(x)/loge(2);
+}
+var log10=fn(x){
+    return loge(x)/loge(10);
+}
+var log3=fn(x){
+    return log2(x)/log2(3);
+}
+
+
+var cos=fn(x){
+    var term = 1.0;
+    var result = 1.0;
+    var power = x * x;
+    var n = 50;
+
+    for (int i = 1, i <= n, 1) {
+        var term = term*(-power / ((2 * i - 1) * (2 * i)));
+        var result += term;
+    }
+    return result;
+}
+var sin=fn(x){
+    var term = x;
+    var result = x;
+    var power = x * x;
+    var n = 50;
+
+    for (int i = 1, i <= n, 1) {
+        var term = term*(-power / ( (2 * i) * (2 * i + 1)));
+        var result += term;
+    }
+    return result;
+}
+
+var max=fn(a,b){
+    if(a>b){
+        return a;
+    }
+    return b;
+}
+var min=fn(a,b){
+    if(a<b){
+        return a;
+    }
+    return b;
+}
+
+var PI=3.1415926536;
