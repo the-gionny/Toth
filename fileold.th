@@ -1,0 +1,533 @@
+\*DOTNET for Toth version ? by Gionny*\
+
+var mydll="C:\Users\cacca\source\repos\NET_Toth\NET_Toth\bin\Debug\x64\NET_Toth.dll";
+var NET_Toth_Controls={}
+
+
+\* OnLoad *\
+callDLL(mydll,"ApplyVisualStyles","void");
+
+\* Colors *\
+var COLOR_AliceBlue = [240, 248, 255];
+var COLOR_AntiqueWhite = [250, 235, 215];
+var COLOR_Aqua = [0, 255, 255];
+var COLOR_Aquamarine = [127, 255, 212];
+var COLOR_Azure = [240, 255, 255];
+var COLOR_Beige = [245, 245, 220];
+var COLOR_Bisque = [255, 228, 196];
+var COLOR_Black = [0, 0, 0];
+var COLOR_BlanchedAlmond = [255, 235, 205];
+var COLOR_Blue = [0, 0, 255];
+var COLOR_BlueViolet = [138, 43, 226];
+var COLOR_Brown = [165, 42, 42];
+var COLOR_BurlyWood = [222, 184, 135];
+var COLOR_CadetBlue = [95, 158, 160];
+var COLOR_Chartreuse = [127, 255, 0];
+var COLOR_Chocolate = [210, 105, 30];
+var COLOR_Coral = [255, 127, 80];
+var COLOR_CornflowerBlue = [100, 149, 237];
+var COLOR_Cornsilk = [255, 248, 220];
+var COLOR_Crimson = [220, 20, 60];
+var COLOR_Cyan = [0, 255, 255];
+var COLOR_DarkBlue = [0, 0, 139];
+var COLOR_DarkCyan = [0, 139, 139];
+var COLOR_DarkGoldenrod = [184, 134, 11];
+var COLOR_DarkGray = [169, 169, 169];
+var COLOR_DarkGreen = [0, 100, 0];
+var COLOR_DarkKhaki = [189, 183, 107];
+var COLOR_DarkMagenta = [139, 0, 139];
+var COLOR_DarkOliveGreen = [85, 107, 47];
+var COLOR_DarkOrange = [255, 140, 0];
+var COLOR_DarkOrchid = [153, 50, 204];
+var COLOR_DarkRed = [139, 0, 0];
+var COLOR_DarkSalmon = [233, 150, 122];
+var COLOR_DarkSeaGreen = [143, 188, 143];
+var COLOR_DarkSlateBlue = [72, 61, 139];
+var COLOR_DarkSlateGray = [47, 79, 79];
+var COLOR_DarkTurquoise = [0, 206, 209];
+var COLOR_DarkViolet = [148, 0, 211];
+var COLOR_DeepPink = [255, 20, 147];
+var COLOR_DeepSkyBlue = [0, 191, 255];
+var COLOR_DimGray = [105, 105, 105];
+var COLOR_DodgerBlue = [30, 144, 255];
+var COLOR_Firebrick = [178, 34, 34];
+var COLOR_FloralWhite = [255, 250, 240];
+var COLOR_ForestGreen = [34, 139, 34];
+var COLOR_Fuchsia = [255, 0, 255];
+var COLOR_Gainsboro = [220, 220, 220];
+var COLOR_GhostWhite = [248, 248, 255];
+var COLOR_Gold = [255, 215, 0];
+var COLOR_Goldenrod = [218, 165, 32];
+var COLOR_Gray = [128, 128, 128];
+var COLOR_Green = [0, 128, 0];
+var COLOR_GreenYellow = [173, 255, 47];
+var COLOR_Honeydew = [240, 255, 240];
+var COLOR_HotPink = [255, 105, 180];
+var COLOR_IndianRed = [205, 92, 92];
+var COLOR_Indigo = [75, 0, 130];
+var COLOR_Ivory = [255, 255, 240];
+var COLOR_Khaki = [240, 230, 140];
+var COLOR_Lavender = [230, 230, 250];
+var COLOR_LavenderBlush = [255, 240, 245];
+var COLOR_LawnGreen = [124, 252, 0];
+var COLOR_LemonChiffon = [255, 250, 205];
+var COLOR_LightBlue = [173, 216, 230];
+var COLOR_LightCoral = [240, 128, 128];
+var COLOR_LightCyan = [224, 255, 255];
+var COLOR_LightGoldenrodYellow = [250, 250, 210];
+var COLOR_LightGray = [211, 211, 211];
+var COLOR_LightGreen = [144, 238, 144];
+var COLOR_LightPink = [255, 182, 193];
+var COLOR_LightSalmon = [255, 160, 122];
+var COLOR_LightSeaGreen = [32, 178, 170];
+var COLOR_LightSkyBlue = [135, 206, 250];
+var COLOR_LightSlateGray = [119, 136, 153];
+var COLOR_LightSteelBlue = [176, 224, 230];
+var COLOR_Lime = [0, 255, 0];
+var COLOR_LimeGreen = [50, 205, 50];
+var COLOR_Linen = [250, 240, 230];
+var COLOR_Magenta = [255, 0, 255];
+var COLOR_Maroon = [128, 0, 0];
+var COLOR_MediumAquamarine = [102, 205, 170];
+var COLOR_MediumBlue = [0, 0, 205];
+var COLOR_MediumOrchid = [186, 85, 211];
+var COLOR_MediumPurple = [147, 112, 219];
+var COLOR_MediumSeaGreen = [60, 179, 113];
+var COLOR_MediumSlateBlue = [123, 104, 238];
+var COLOR_MediumSpringGreen = [0, 250, 154];
+var COLOR_MediumTurquoise = [72, 209, 204];
+var COLOR_MediumVioletRed = [199, 21, 133];
+var COLOR_MidnightBlue = [25, 25, 112];
+var COLOR_MintCream = [245, 255, 250];
+var COLOR_MistyRose = [255, 228, 225];
+var COLOR_Moccasin = [255, 228, 181];
+var COLOR_NavajoWhite = [255, 222, 173];
+var COLOR_Navy = [0, 0, 128];
+var COLOR_OldLace = [253, 245, 230];
+var COLOR_Olive = [128, 128, 0];
+var COLOR_OliveDrab = [107, 142, 35];
+var COLOR_Orange = [255, 165, 0];
+var COLOR_OrangeRed = [255, 69, 0];
+var COLOR_Orchid = [218, 112, 214];
+var COLOR_PaleGoldenrod = [238, 232, 170];
+var COLOR_PaleGreen = [152, 251, 152];
+var COLOR_PaleTurquoise = [175, 238, 238];
+var COLOR_PaleVioletRed = [219, 112, 147];
+var COLOR_PapayaWhip = [255, 239, 184];
+var COLOR_PeachPuff = [255, 218, 185];
+var COLOR_Peru = [205, 133, 63];
+var COLOR_Pink = [255, 192, 203];
+var COLOR_Plum = [221, 160, 221];
+var COLOR_PowderBlue = [176, 224, 230];
+var COLOR_Purple = [128, 0, 128];
+var COLOR_Red = [255, 0, 0];
+var COLOR_RosyBrown = [188, 143, 143];
+var COLOR_RoyalBlue = [65, 105, 225];
+var COLOR_SaddleBrown = [139, 69, 19];
+var COLOR_Salmon = [250, 128, 114];
+var COLOR_SandyBrown = [244, 164, 96];
+var COLOR_SeaGreen = [46, 139, 87];
+var COLOR_SeaShell = [255, 245, 238];
+var COLOR_Sienna = [160, 82, 45];
+var COLOR_Silver = [192, 192, 192];
+var COLOR_SkyBlue = [135, 206, 235];
+var COLOR_SlateBlue = [106, 90, 205];
+var COLOR_SlateGray = [112, 128, 144];
+var COLOR_Snow = [255, 250, 250];
+var COLOR_SpringGreen = [0, 255, 127];
+var COLOR_SteelBlue = [70, 130, 180];
+var COLOR_Tan = [210, 180, 140];
+var COLOR_Teal = [0, 128, 128];
+var COLOR_Thistle = [216, 191, 216];
+var COLOR_Tomato = [255, 99, 71];
+var COLOR_Turquoise = [64, 224, 208];
+var COLOR_Violet = [238, 130, 238];
+var COLOR_Wheat = [245, 222, 179];
+var COLOR_White = [255, 255, 255];
+var COLOR_WhiteSmoke = [245, 245, 245];
+var COLOR_Yellow = [255, 255, 0];
+var COLOR_YellowGreen = [154, 205, 50];
+
+
+
+var NET_Toth_TypeError=fn(funcname,argnumber,expectedtype,id){
+    if(typeof(id)!=expectedtype){throwError("argument["+argnumber+"] `"+funcname+"` must be "+expectedtype+", got "+typeof(id))}
+}
+
+\* Functions *\
+
+var Remove_Control=fn(id){
+    if(typeof(id)!="INTEGER"){throwError("argument[0] `Remove_Control` must be INTEGER, got "+typeof(id))}
+
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Remove_Control` Invalid ID: The Control do not exist!")
+    }else{
+        callDLL(mydll,"RemoveControl","void",id);
+    }
+}
+
+var Create_Form=fn(x,y,width,height,title){
+    NET_Toth_TypeError("Create_Form",0,"INTEGER",x); NET_Toth_TypeError("Create_Form",1,"INTEGER",y);
+    NET_Toth_TypeError("Create_Form",2,"INTEGER",width); NET_Toth_TypeError("Create_Form",3,"INTEGER",height); NET_Toth_TypeError("Create_Form",4,"STRING",title);
+    callDLL(mydll,"CreateNewForm","void",x,y,width,height,title);
+}
+
+var Create_Button=fn(id){
+    NET_Toth_TypeError("Create_Button",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        var NET_Toth_Controls =: hashEdit(NET_Toth_Controls,toString(id),"Button");
+        var NET_Toth_canclick =: hashEdit(NET_Toth_canclick,toString(id),true);
+        callDLL(mydll,"CreateNewButton","void",id);
+    }else{
+        throwError("`Create_Button` a Control with the same ID already exists!")
+    }
+}
+var Create_Label=fn(id){
+    NET_Toth_TypeError("Create_Label",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        var NET_Toth_Controls =: hashEdit(NET_Toth_Controls,toString(id),"Label");
+        callDLL(mydll,"CreateNewLabel","void",id);
+    }else{
+        throwError("`Create_Label` a Control with the same ID already exists!")
+    }
+}
+var Create_TextBox=fn(id){
+    NET_Toth_TypeError("Create_TextBox",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        var NET_Toth_Controls =: hashEdit(NET_Toth_Controls,toString(id),"TextBox");
+        callDLL(mydll,"CreateNewTextBox","void",id);
+    }else{
+        throwError("`Create_TextBox` a Control with the same ID already exists!")
+    }
+}
+var Create_CheckBox=fn(id){
+    NET_Toth_TypeError("Create_CheckBox",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        var NET_Toth_Controls =: hashEdit(NET_Toth_Controls,toString(id),"CheckBox");
+        callDLL(mydll,"CreateNewCheckBox","void",id);
+    }else{
+        throwError("`Create_CheckBox` a Control with the same ID already exists!")
+    }
+}
+var Create_MessageBox=fn(text,title){
+    NET_Toth_TypeError("Create_MessageBox",0,"STRING",text); NET_Toth_TypeError("Create_MessageBox",1,"STRING",title);
+    callDLL(mydll,"CreateNewMessageBox","void",text,title);
+}
+var Create_ComboBox=fn(id){
+    NET_Toth_TypeError("Create_ComboBox",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        var NET_Toth_Controls =: hashEdit(NET_Toth_Controls,toString(id),"ComboBox");
+        callDLL(mydll,"CreateNewComboBox","void",id);
+    }else{
+        throwError("`Create_ComboBox` a Control with the same ID already exists!")
+    }
+}
+var Create_ListBox=fn(id){
+    NET_Toth_TypeError("Create_ListBox",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        var NET_Toth_Controls =: hashEdit(NET_Toth_Controls,toString(id),"ListBox");
+        callDLL(mydll,"CreateNewListBox","void",id);
+    }else{
+        throwError("`Create_ListBox` a Control with the same ID already exists!")
+    }
+}
+var Set_Size=fn(id,width,height){
+    NET_Toth_TypeError("Set_Size",0,"INTEGER",id); NET_Toth_TypeError("Set_Size",1,"INTEGER",width); NET_Toth_TypeError("Set_Size",2,"INTEGER",height);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Set_Size` Invalid ID: The Control do not exist!")
+    }else{
+        callDLL(mydll,"SetControlSize","void",id,width,height);
+    }
+}
+
+var Set_Location=fn(id,x,y){
+    NET_Toth_TypeError("Set_Location",0,"INTEGER",id); NET_Toth_TypeError("Set_Location",1,"INTEGER",x); NET_Toth_TypeError("Set_Location",2,"INTEGER",y);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Set_Location` Invalid ID: The Control do not exist!")
+    }else{
+        callDLL(mydll,"SetControlLocation","void",id,x,y);
+    }
+}
+
+var Set_Text=fn(id,text){
+    NET_Toth_TypeError("Set_Text",0,"INTEGER",id); NET_Toth_TypeError("Set_Text",1,"STRING",text);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Set_Text` Invalid ID: The Control do not exist!")
+    }else{
+        callDLL(mydll,"SetControlText","void",id,text);
+    }
+}
+
+var Set_BackColor=fn(id,color){
+    NET_Toth_TypeError("Set_BackColor",0,"INTEGER",id); NET_Toth_TypeError("Set_BackColor",1,"ARRAY",color);
+    if(typeof(color[0])!="INTEGER" || color[0]>255 || color[0]<0){throwError("`Set_BackColor` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[0])}
+    if(typeof(color[1])!="INTEGER" || color[1]>255 || color[1]<0){throwError("`Set_BackColor` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[1])}
+    if(typeof(color[2])!="INTEGER" || color[2]>255 || color[2]<0){throwError("`Set_BackColor` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[2])}
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Set_BackColor` Invalid ID: The Control do not exist!")
+    }else{
+        callDLL(mydll,"SetControlBackColor","void",id,color[0],color[1],color[2]);
+    }
+}
+var Set_ForeColor=fn(id,color){
+    NET_Toth_TypeError("Set_ForeColor",0,"INTEGER",id); NET_Toth_TypeError("Set_ForeColor",1,"ARRAY",color);
+    if(typeof(color[0])!="INTEGER" || color[0]>255 || color[0]<0){throwError("`Set_ForeColor` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[0])}
+    if(typeof(color[1])!="INTEGER" || color[1]>255 || color[1]<0){throwError("`Set_ForeColor` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[1])}
+    if(typeof(color[2])!="INTEGER" || color[2]>255 || color[2]<0){throwError("`Set_ForeColor` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[2])}
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Set_ForeColor` Invalid ID: The Control do not exist!")
+    }else{
+        callDLL(mydll,"SetControlForeColor","void",id,color[0],color[1],color[2]);
+    }
+}
+
+var SetForm_Color=fn(color){
+    if(typeof(color[0])!="INTEGER" || color[0]>255 || color[0]<0){throwError("`SetForm_Color` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[0])}
+    if(typeof(color[1])!="INTEGER" || color[1]>255 || color[1]<0){throwError("`SetForm_Color` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[1])}
+    if(typeof(color[2])!="INTEGER" || color[2]>255 || color[2]<0){throwError("`SetForm_Color` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[2])}
+    callDLL(mydll,"SetFormBackColor","void",color[0],color[1],color[2]);
+}
+
+var Set_Font=fn(id,fontname,size){
+    NET_Toth_TypeError("Set_Font",0,"INTEGER",id); NET_Toth_TypeError("Set_Font",1,"STRING",fontname); NET_Toth_TypeError("Set_Font",2,"INTEGER",size);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Set_Font` Invalid ID: The Control do not exist!")
+    }else{
+        callDLL(mydll,"SetControlTextStyle","void",id,fontname,size);
+    }
+}
+
+var Get_Location=fn(id){
+    NET_Toth_TypeError("Get_Location",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Get_Location` Invalid ID: The Control do not exist!")
+    }else{
+        return [callDLL(mydll,"GetControlLocationX","int",id),callDLL(mydll,"GetControlLocationY","int",id)];
+    }
+}
+var Get_Size=fn(id){
+    NET_Toth_TypeError("Get_Size",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Get_Size` Invalid ID: The Control do not exist!")
+    }else{
+        return [callDLL(mydll,"GetControlSizeWidth","int",id),callDLL(mydll,"GetControlSizeHeight","int",id)];
+    }
+}
+var Get_Text=fn(id){
+    NET_Toth_TypeError("Get_Text",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Get_Text` Invalid ID: The Control do not exist!")
+    }else{
+        return callDLL(mydll,"GetControlText","string",id);
+    }
+}
+
+
+var Get_Type=fn(id){
+    NET_Toth_TypeError("Get_Type",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Get_Type` Invalid ID: The Control do not exist!")
+    }else{
+        return NET_Toth_Controls[toString(id)];
+    }
+}
+
+var GetForm_Location=fn(){
+    return [callDLL(mydll,"GetFormLocationX","int"),callDLL(mydll,"GetFormLocationY","int")];
+}
+var GetForm_Size=fn(){
+    return [callDLL(mydll,"GetFormSizeWidth","int"),callDLL(mydll,"GetFormSizeHeight","int")];
+}
+
+
+var Get_Controls=fn(){
+    return NET_Toth_Controls;
+}
+
+var Items_Add=fn(id,item){
+    NET_Toth_TypeError("Items_Add",0,"INTEGER",id);
+    NET_Toth_TypeError("Items_Add",1,"STRING",item);
+    if(NET_Toth_Controls[toString(id)]!="ComboBox" && NET_Toth_Controls[toString(id)]!="ListBox"){throwError("`Items_Add` Invalid Control: The Control type must be ComboBox/ListBox!")}
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Items_Add` Invalid ID: The Control do not exist!")
+    }else{
+        callDLL(mydll,"AddItems","void",id,item)
+    }
+}
+var Items_Remove=fn(id,item){
+    NET_Toth_TypeError("Items_Remove",0,"INTEGER",id);
+    NET_Toth_TypeError("Items_Remove",1,"STRING",item);
+    if(NET_Toth_Controls[toString(id)]!="ComboBox" && NET_Toth_Controls[toString(id)]!="ListBox"){throwError("`Items_Remove` Invalid Control: The Control type must be ComboBox/ListBox!")}
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Items_Remove` Invalid ID: The Control do not exist!")
+    }else{
+        callDLL(mydll,"RemoveItems","void",id,item)
+    }
+}
+var Set_ItemID=fn(id,itemid){
+    NET_Toth_TypeError("Set_ItemID",0,"INTEGER",id);
+    NET_Toth_TypeError("Set_ItemID",1,"INTEGER",itemid);
+    if(NET_Toth_Controls[toString(id)]!="ComboBox" && NET_Toth_Controls[toString(id)]!="ListBox"){throwError("`Set_ItemID` Invalid Control: The Control type must be ComboBox/ListBox!")}
+    var items = split(callDLL(mydll,"GetItems","string",id),"\n")
+    if(itemid> len(items)-1 || itemid<-1){
+        throwError("`Set_ItemID` Invalid ID: The item do not exist!")
+    }
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Set_ItemID` Invalid ID: The Control do not exist!")
+    }else{
+        callDLL(mydll,"SetItem","void",id,itemid)
+    }
+}
+var Get_Item=fn(id,itemid){
+    NET_Toth_TypeError("Get_Item",0,"INTEGER",id);
+    NET_Toth_TypeError("Get_Item",1,"INTEGER",itemid);
+    if(NET_Toth_Controls[toString(id)]!="ComboBox" && NET_Toth_Controls[toString(id)]!="ListBox"){throwError("`Get_Item` Invalid Control: The Control type must be ComboBox/ListBox!")}
+    var items = split(callDLL(mydll,"GetItems","string",id),"\n")
+    if(itemid> len(items)-1 || itemid<-1){
+        throwError("`Get_Item` Invalid ID: The item do not exist!")
+    }    
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){
+        throwError("`Get_Item` Invalid ID: The Control do not exist!")
+    }
+    return items[itemid];
+}
+
+var Items_Length=fn(id){
+    NET_Toth_TypeError("Get_Item",0,"INTEGER",id);
+    if(NET_Toth_Controls[toString(id)]!="ComboBox" && NET_Toth_Controls[toString(id)]!="ListBox"){throwError("`Get_Item` Invalid Control: The Control type must be ComboBox/ListBox!")}
+    var items = split(callDLL(mydll,"GetItems","string",id),"\n")
+    return len(items);
+}
+
+
+var NET_Toth_canclick={};
+
+var IsButtonDown=fn(id){
+    
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){throwError("`IsButtonDown("+id+")` Invalid ID: The Control do not exist!")}
+    if(NET_Toth_Controls[toString(id)]!="Button"){throwError("`IsButtonDown` Invalid Control: The Control type must be Button!")}
+
+    if(callDLL(mydll,"ControlIsDown","int", id) == 0){
+        var NET_Toth_canclick =: hashEdit(NET_Toth_canclick,toString(id),true);
+    }
+    if(callDLL(mydll,"ControlIsDown","int", id) == 1 && NET_Toth_canclick[toString(id)]){
+        var NET_Toth_canclick =: hashEdit(NET_Toth_canclick,toString(id),false);
+        return true;
+    }
+    return false;
+}
+
+
+var IsCheckBoxChecked=fn(id){
+    NET_Toth_TypeError("IsCheckBoxChecked",0,"INTEGER",id);
+    if(typeof(NET_Toth_Controls[toString(id)])=="NULL"){throwError("`IsCheckBoxChecked` Invalid ID: The Control do not exist!")}
+    if(NET_Toth_Controls[toString(id)]!="CheckBox"){throwError("`IsCheckBoxChecked` Invalid Control: The Control type must be CheckBox!")}
+    return callDLL(mydll,"ControlIsChecked","bool",id);
+}
+
+
+var NET_Toth_firsttime=true
+var Draw_Square=fn(x,y,width,height,color){
+    NET_Toth_TypeError("Draw_Square",0,"INTEGER",x);
+    NET_Toth_TypeError("Draw_Square",1,"INTEGER",y);
+    NET_Toth_TypeError("Draw_Square",2,"INTEGER",width);
+    NET_Toth_TypeError("Draw_Square",3,"INTEGER",height);
+    NET_Toth_TypeError("Draw_Square",4,"ARRAY",color);
+    if(typeof(color[0])!="INTEGER" || color[0]>255 || color[0]<0){throwError("`Draw_Square` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[0])}
+    if(typeof(color[1])!="INTEGER" || color[1]>255 || color[1]<0){throwError("`Draw_Square` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[1])}
+    if(typeof(color[2])!="INTEGER" || color[2]>255 || color[2]<0){throwError("`Draw_Square` Invalid Colorcode: must be INTEGER between 0 and 255. got="+ color[2])}
+    if(NET_Toth_firsttime){
+        var NET_Toth_firsttime=false;
+        sleep(10);
+    }
+    if(callDLL(mydll,"IsFormRunning","int")==1){
+        callDLL(mydll,"DrawSquare","void",x,y,width,height,color[0],color[1],color[2])
+    }
+}
+var NET_Toth_firsttime2=true
+
+
+
+var FormRunning=fn(){
+    var v=callDLL(mydll,"IsFormRunning","int");
+    if(v==1){return true;}
+    return false;
+}
+
+var RunApp=fn(){
+    callDLL(mydll,"RunApplication","void");
+}
+
+
+
+
+
+
+Create_Form(0,0,700,400,"yeah è cosi");
+
+Create_Button(0);
+Set_Size(0, 150,50);
+Set_Location(0, 100,100);
+Set_Text(0, "ciaooo");
+Set_ForeColor(0, COLOR_SteelBlue);
+Set_BackColor(0, [145,255,120]);
+
+Create_Label(1);
+Set_Location(1,100,0);
+Set_Text(1,"Testo");
+Set_Font(1,"Stencil",16);
+
+Create_TextBox(2);
+Set_Location(2,100,50);
+Set_Text(2,"default text")
+
+Create_CheckBox(3);
+Set_Location(3,220,50);
+Set_Text(3,"Check me!");
+
+Create_ComboBox(4);
+Set_Location(4,400,50);
+Items_Add(4,"Banana");
+Items_Add(4,"Pomodoro");
+Items_Add(4,"Ananas");
+Items_Add(4,"Kiwi");
+Items_Remove(4,"Kiwi");
+Set_ItemID(4,1);
+
+Create_ListBox(5);
+Set_Location(5,500,150);
+Items_Add(5,"Element 0");
+Items_Add(5,"Element 1");
+Items_Add(5,"Element 2");
+Items_Add(5,"Element 3");
+Set_ItemID(5,3)
+
+for(var i=0,i<Items_Length(5),1){
+    println(Get_Item(5,i));
+}
+
+println(Get_Location(1));
+println(Get_Size(1));
+println(Get_Controls());
+println(Get_Type(2));
+println(GetForm_Location());
+println(GetForm_Size());
+
+Create_Label(-1);
+Remove_Control(-1);
+RunApp()
+var xPos=0;
+
+
+while(FormRunning()){
+
+    Draw_Square(xPos,0,10,10,COLOR_OrangeRed);
+
+    callDLL(mydll,"RenderAll","void")
+    if(IsButtonDown(0)){
+        println("0",IsCheckBoxChecked(3),Get_Text(4));
+    }
+    var xPos += 1
+}
+
+
